@@ -1,0 +1,29 @@
+Source: libdevel-size-perl
+Maintainer: Debian Perl Group <pkg-perl-maintainers@lists.alioth.debian.org>
+Uploaders: Niko Tyni <ntyni@debian.org>,
+           gregor herrmann <gregoa@debian.org>,
+           Ansgar Burchardt <ansgar@debian.org>
+Section: perl
+Testsuite: autopkgtest-pkg-perl
+Priority: optional
+Build-Depends: debhelper-compat (= 12),
+               libtest-pod-coverage-perl,
+               libtest-pod-perl,
+               libtest-simple-perl,
+               perl
+Standards-Version: 4.4.0
+Vcs-Browser: https://salsa.debian.org/perl-team/modules/packages/libdevel-size-perl
+Vcs-Git: https://salsa.debian.org/perl-team/modules/packages/libdevel-size-perl.git
+Homepage: https://metacpan.org/release/Devel-Size
+
+Package: libdevel-size-perl
+Architecture: any
+Depends: ${misc:Depends},
+         ${perl:Depends},
+         ${shlibs:Depends},
+         libtest-simple-perl
+Description: Perl extension for finding the memory usage of Perl variables
+ Devel::Size figures out the real sizes of Perl variables in bytes. Call
+ functions with a reference to the variable you want the size of. If the
+ variable is a plain scalar it returns the size of the scalar. If the
+ variable is a hash or an array, use a reference when calling.
